@@ -1,84 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
+
+const NavLinks = [
+  {
+    id: 1,
+    name: "Ashram",
+    link: "/",
+  },
+  {
+    id: 2,
+    name: "Mandir",
+    link: "/mandir",
+  },
+  {
+    id: 3,
+    name: "Bhakti",
+    link: "/bhakti",
+  },
+  {
+    id: 4,
+    name: "App",
+    link: "/app",
+  },
+  {
+    id: 5,
+    name: "Contact Us",
+    link: "/contact-us",
+  },
+];
 
 function Header() {
+  const [ActiveState, setActiveState] = useState(0);
+  const [collapse, setCollapse] = useState(false);
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          Navbar
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid d-flex">
+        <a className="navbar-brand" href="/">
+          Shrimad Rajchandra Mandir Devlali
         </a>
         <button
-          class="navbar-toggler"
+          className={`navbar-toggler ${collapse ? "collapsed" : ""}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarColor01"
           aria-controls="navbarColor01"
-          aria-expanded="false"
+          aria-expanded="true"
           aria-label="Toggle navigation"
+          onClick={() => setCollapse(!collapse)}
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="/">
-                Home
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                Features
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                Pricing
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                About
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="/"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="/">
-                  Action
+        <div
+          className={`collapse navbar-collapse d-lg-flex justify-content-end ${
+            collapse ? "show" : ""
+          }`}
+          id="navbarColor01"
+        >
+          <ul className="navbar-nav me-auto me-lg-2">
+            {NavLinks.map((item) => (
+              <li className="nav-item" key={item.id}>
+                <a
+                  className={`nav-link ${
+                    ActiveState === item.id ? "active" : ""
+                  }`}
+                  href={item.link}
+                >
+                  {item.name}
                 </a>
-                <a class="dropdown-item" href="/">
-                  Another action
-                </a>
-                <a class="dropdown-item" href="/">
-                  Something else here
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/">
-                  Separated link
-                </a>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-sm-2"
-              type="search"
-              placeholder="Search"
-            />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
