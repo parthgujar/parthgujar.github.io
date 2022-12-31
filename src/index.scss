@@ -128,9 +128,28 @@ a {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}
 
-    .contact-map {
-    }
+.BodhPage {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    color: #000;
+    font-family: "Noto Sans Gujarati";
+  }
+  margin-bottom: 80px;
+  .bodh-card {
+    padding: 50px;
+    background-color: #fff;
+    color: #000 !important;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -139,13 +158,19 @@ a {
     font-size: 1rem;
   }
   .rules-card {
+    height: calc(90vh - 67.63px - 67.5px);
     ul {
       width: 80%;
       padding: 25px;
     }
   }
-  .footer {
-    position: sticky;
-    top: 100%;
+  .navbar .footer {
+    position: sticky !important;
+    bottom: 0;
+  }
+  nav {
+    position: sticky !important;
+    top: 0;
+    z-index: 99;
   }
 }

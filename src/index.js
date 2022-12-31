@@ -2,13 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import "./index.scss";
-
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./Pages/ErrorPage";
 import HomePage from "./Pages/HomePage";
+import FacilitiesPage from "./Pages/Facilities";
 import RulesPage from "./Pages/RulesPage";
 import ContactPage from "./Pages/ContactPage";
+import GalleryPage from "./Pages/GalleryPage";
+import BodhPage from "./Pages/BodhPage";
+import JeevanCharitra from "./Pages/JeevanCharitra";
+import MandirGalleryPage from "./Pages/MandirGallery";
+
+import "./index.scss";
 
 const router = createBrowserRouter([
   {
@@ -17,13 +22,38 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: "/ashram-gallery",
+    element: <GalleryPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/rules",
     element: <RulesPage />,
     errorElement: <ErrorPage />,
   },
   {
+    path: "/facilities",
+    element: <FacilitiesPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/contact-us",
     element: <ContactPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/mandir-gallery",
+    element: <MandirGalleryPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/bodh",
+    element: <BodhPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/jeevan-charitra",
+    element: <JeevanCharitra />,
     errorElement: <ErrorPage />,
   },
 ]);

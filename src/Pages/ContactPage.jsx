@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClock,
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { ContactUsForm } from "../Components/ContactUsForm";
 import Footer from "../Components/Layout/Footer";
@@ -21,21 +26,24 @@ export default function ContactPage() {
             <div className="col-md-4 pr-5">
               <div className="contact-info">
                 <h4 className="mb-3">Contact Info</h4>
-                <p>
-                  <span className="fa fa-clock"></span> 10:00 AM - 12.00 PM{" "}
-                  <br /> 4.00 PM - 7.00 PM
+                <p className="d-flex align-items-start">
+                  <FontAwesomeIcon icon={faClock} className="mt-1" /> &nbsp;
+                  10:00 AM - 12.00 PM <br /> &nbsp;&nbsp;4.00 PM - 7.00 PM
                 </p>
-                <p>
-                  <span className="fa fa-phone-alt"></span> 025-32496866 <br />
-                  +91-9881065981
+                <p className="d-flex align-items-start">
+                  <FontAwesomeIcon icon={faPhone} className="mt-1" /> &nbsp;
+                  025-32496866 <br />
+                  &nbsp;&nbsp; +91-9881065981
                 </p>
-                <p>
-                  <FontAwesomeIcon icon="fa-regular fa-envelope" />
+                <p className="d-flex align-items-center">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  &nbsp; &nbsp;
                   <a href="mailto:office@srsmd.com">office@srsmd.com</a>
                 </p>
-                <p>
-                  <span className="fa fa-map-marker-alt"></span> Lam Rd, Deolali
-                  Gaon, Nashik, Maharashtra 422401, India.
+                <p className="d-flex align-items-start">
+                  <FontAwesomeIcon icon={faMapMarkerAlt} className="mt-1" />
+                  &nbsp; &nbsp;Lam Rd, Deolali Gaon, Nashik, Maharashtra 422401,
+                  India.
                 </p>
               </div>
             </div>
