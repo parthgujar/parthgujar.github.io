@@ -20,7 +20,7 @@ export default function MandirGalleryPage() {
                   <h3>Mandir Gallery</h3>
                 </div>
                 <ResponsiveMasonry
-                  columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+                  columnsCountBreakPoints={{ 350: 1, 750: 1, 900: 3 }}
                 >
                   <Masonry gutter="10px">
                     {MANDIRGALLERY.map((item, index) => (

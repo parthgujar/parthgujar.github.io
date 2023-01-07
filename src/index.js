@@ -12,8 +12,11 @@ import GalleryPage from "./Pages/GalleryPage";
 import BodhPage from "./Pages/BodhPage";
 import JeevanCharitra from "./Pages/JeevanCharitra";
 import MandirGalleryPage from "./Pages/MandirGallery";
+import PratimajiPage from "./Pages/PratimajiPage";
+import MusicPage from "./Pages/AllMusic";
 
 import "./index.scss";
+import "./player.scss";
 
 const router = createBrowserRouter([
   {
@@ -52,8 +55,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: "/pratimaji",
+    element: <PratimajiPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/jeevan-charitra",
     element: <JeevanCharitra />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/most-popular",
+    element: <MusicPage />,
     errorElement: <ErrorPage />,
   },
 ]);

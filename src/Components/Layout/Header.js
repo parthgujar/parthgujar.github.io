@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NavLinks = [
   {
     id: 1,
     name: "Ashram",
-    link: "/",
+    link: "/ashram-gallery",
   },
   {
     id: 2,
     name: "Mandir",
-    link: "/mandir",
+    link: "/mandir-gallery",
   },
   {
     id: 3,
@@ -31,6 +31,16 @@ const NavLinks = [
 function Header() {
   const [ActiveState, setActiveState] = useState(0);
   const [collapse, setCollapse] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname === "/") setActiveState(0);
+    else if (window.location.pathname === "/ashram-gallery") setActiveState(1);
+    else if (window.location.pathname === "/mandir-gallery") setActiveState(2);
+    else if (window.location.pathname === "/bhakti") setActiveState(3);
+    else if (window.location.pathname === "/app") setActiveState(4);
+    else if (window.location.pathname === "/contact-us") setActiveState(5);
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid d-flex">
