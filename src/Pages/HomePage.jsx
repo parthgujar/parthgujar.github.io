@@ -2,7 +2,7 @@ import ImageCardWithTitle from "../Components/ImageCardWithTitle";
 import Footer from "../Components/Layout/Footer";
 import Header from "../Components/Layout/Header";
 import {
-  ASHRAMSECTION,
+  SWADHYAYSECTION,
   BHAKTISECTION,
   HEADERSECTION,
   MANDIRSECTION,
@@ -22,7 +22,7 @@ function HomePage() {
         </div>
         <div className="d-none d-lg-flex  pt-3 px-2 mt-3 flex-row justify-content-around">
           <div className="d-none d-lg-flex  flex-wrap col-md-4">
-            {ASHRAMSECTION.map((section) => (
+            {SWADHYAYSECTION.map((section) => (
               <div key={section.id} className="section w-50 p-4">
                 <ImageCardWithTitle
                   image={section.image}
@@ -64,7 +64,7 @@ function HomePage() {
           <h3>{HEADERSECTION[0].name}</h3>
 
           <div className="d-flex d-lg-none flex-wrap pt-3 px-1 mt-3 flex-row justify-content-around">
-            {ASHRAMSECTION.map((section) => (
+            {SWADHYAYSECTION.map((section) => (
               <div key={section.id} className="section w-50 p-4">
                 <ImageCardWithTitle
                   image={section.image}

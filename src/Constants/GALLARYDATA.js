@@ -6,7 +6,8 @@ import image5 from "/public/static/assets/images/DSC9011copy.jpg";
 import image6 from "/public/static/assets/images/DSC9034copy.jpg";
 import image7 from "/public/static/assets/images/DSC9138copy.jpg";
 import image8 from "/public/static/assets/images/DSC9052copy.jpg";
-import image9 from "/public/static/assets/images/RKS_52915308A.jpg";
+import image9 from "/public/static/assets/images/RKS_52915308A.jpg"
+
 
 const GALLARYDATA = [
   {
