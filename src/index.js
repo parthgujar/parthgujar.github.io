@@ -5,16 +5,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./Pages/ErrorPage";
 import HomePage from "./Pages/HomePage";
-import FacilitiesPage from "./Pages/Facilities";
-import RulesPage from "./Pages/RulesPage";
 import ContactPage from "./Pages/ContactPage";
-import GalleryPage from "./Pages/GalleryPage";
 import BodhPage from "./Pages/BodhPage";
 import JeevanCharitra from "./Pages/JeevanCharitra";
 import MandirGalleryPage from "./Pages/MandirGallery";
 import PratimajiPage from "./Pages/PratimajiPage";
-import MusicPage from "./Pages/AllMusic";
+import MostPopular from "./Pages/MostPopular";
+import Nityakram from "./Pages/Nityakram";
+import AllCDs from "./Pages/Allcds";
+import AllAlbums from "./Pages/AllAlbums";
+import AshramPage from "./Pages/AshramPage";
 
+import "react-accessible-accordion/dist/fancy-example.css";
 import "./index.scss";
 import "./player.scss";
 
@@ -25,18 +27,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/ashram-gallery",
-    element: <GalleryPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/rules",
-    element: <RulesPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/facilities",
-    element: <FacilitiesPage />,
+    path: "/ashram",
+    element: <AshramPage />,
     errorElement: <ErrorPage />,
   },
   {
@@ -65,8 +57,43 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/most-popular",
-    element: <MusicPage />,
+    path: "/bhakti-daily",
+    element: <Nityakram />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/bhakti-popular",
+    element: <MostPopular />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/bhakti-videos",
+    element: <AllCDs />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/bhakti-all-songs",
+    element: <AllAlbums />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/swadhyay-daily",
+    element: <Nityakram />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/swadhyay-popular",
+    element: <MostPopular />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/swadhyay-videos",
+    element: <AllCDs />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/swadhyay-all-songs",
+    element: <AllAlbums />,
     errorElement: <ErrorPage />,
   },
 ]);

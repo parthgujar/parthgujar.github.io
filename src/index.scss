@@ -93,25 +93,29 @@ a {
   }
 }
 
-.rules-card {
+.rules-facilities {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  position: relative;
 
-  ul {
-    width: 50%;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: calc(40vh - 175px - 67.5px - 10px);
-    padding: 50px;
-    li {
-      text-align: start;
-      margin-bottom: 5px;
-      color: #000;
+  .rules-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    ul {
+      width: 80%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      // position: absolute;
+      // top: calc(40vh - 175px - 67.5px - 10px);
+      padding: 50px;
+      li {
+        font-size: 18px;
+        text-align: start;
+        margin-bottom: 5px;
+        color: #000;
+      }
     }
   }
 }
@@ -145,21 +149,41 @@ a {
   }
   margin-bottom: 80px;
   .bodh-card {
-    padding: 50px;
+    padding: 50px 25px;
     background-color: #fff;
     color: #000 !important;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    p {
+      font-size: 18px;
+    }
+    .accordion__button,
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+      font-family: "Noto Sans Gujarati";
+    }
+    h6 {
+      font-size: 20px;
+    }
   }
 }
 
 @media (max-width: 768px) {
+  .contact-map {
+    iframe {
+      height: 300px;
+      width: 100%;
+    }
+  }
   .navbar-brand {
     font-size: 1rem;
   }
   .rules-card {
-    height: calc(90vh - 67.63px - 67.5px);
+    height: fit-content;
     ul {
+      position: static;
       width: 80%;
       padding: 25px;
     }
@@ -172,5 +196,30 @@ a {
     position: sticky !important;
     top: 0;
     z-index: 99;
+  }
+  .BodhPage {
+    .bodh-card {
+      p {
+        font-size: 16px;
+      }
+      .accordion__button,
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: "Noto Sans Gujarati";
+      }
+      h6 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .contact-map {
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
   }
 }

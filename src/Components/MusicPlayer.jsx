@@ -1,40 +1,17 @@
 import React from "react";
+import {
+  faBackward,
+  faForward,
+  faPause,
+  faPlay,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class MusicPlayer extends React.Component {
   state = {
     index: 3,
     currentTime: "0:00",
-    musicList: [
-      {
-        name: "Nice piano and ukulele",
-        author: "Royalty",
-        img: "https://www.bensound.com/bensound-img/buddy.jpg",
-        audio: "https://www.bensound.com/bensound-music/bensound-buddy.mp3",
-        duration: "2:02",
-      },
-      {
-        name: "Gentle acoustic",
-        author: "Acoustic",
-        img: "https://www.bensound.com/bensound-img/sunny.jpg",
-        audio: "https://www.bensound.com//bensound-music/bensound-sunny.mp3",
-        duration: "2:20",
-      },
-      {
-        name: "Corporate motivational",
-        author: "Corporate",
-        img: "https://www.bensound.com/bensound-img/energy.jpg",
-        audio: "https://www.bensound.com/bensound-music/bensound-energy.mp3",
-        duration: "2:59",
-      },
-      {
-        name: "Slow cinematic",
-        author: "Royalty",
-        img: "https://www.bensound.com/bensound-img/slowmotion.jpg",
-        audio:
-          "https://www.bensound.com/bensound-music/bensound-slowmotion.mp3",
-        duration: "3:26",
-      },
-    ],
+    musicList: this.props.musicList,
     pause: false,
   };
 
@@ -177,6 +154,7 @@ class MusicPlayer extends React.Component {
     return (
       <div className="MusicPlayer">
         <div className="current-song">
+          <h3 className="mb-4 text-center">{this.props.title}</h3>
           <audio ref={(ref) => (this.playerRef = ref)}>
             <source src={currentSong.audio} type="audio/ogg" />
             Your browser does not support the audio element.
@@ -206,21 +184,25 @@ class MusicPlayer extends React.Component {
               onClick={this.prevSong}
               className="prev prev-next current-btn"
             >
-              <i className="fas fa-backward"></i>
+              <FontAwesomeIcon
+                icon={faBackward}
+                className="fas fa-backward"
+                fill="white"
+              />
             </button>
 
             <button onClick={this.playOrPause} className="play current-btn">
               {!pause ? (
-                <i className="fas fa-play" />
+                <FontAwesomeIcon className="fas fa-play" icon={faPlay} />
               ) : (
-                <i class="fas fa-pause" />
+                <FontAwesomeIcon className="fas fa-pause" icon={faPause} />
               )}
             </button>
             <button
               onClick={this.nextSong}
               className="next prev-next current-btn"
             >
-              <i className="fas fa-forward"></i>
+              <FontAwesomeIcon icon={faForward} className="fas fa-forward" />
             </button>
           </div>
         </div>
@@ -252,16 +234,3 @@ class MusicPlayer extends React.Component {
 }
 
 export default MusicPlayer;
-
-// .MusicPlayerPage {
-//   font-family: "Rubik", sans-serif;
-//   color: $base;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   background: #000;
-//   h1 {
-//     font-size: 36px;
-//     margin-bottom: 0;
-//   }}
