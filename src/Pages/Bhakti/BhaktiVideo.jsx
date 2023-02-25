@@ -4,7 +4,6 @@ import Footer from "../../Components/Layout/Footer";
 import Header from "../../Components/Layout/Header";
 import VideoPlayer from "../../Components/VideoPlayer";
 
-import historyVideo from "../../../public/static/assets/videos/Shrimad Rajchandra Swadhyay Mandir History_480p.mp4";
 import BHAKTIVIDEOLIST from "../../Constants/BHAKTIVIDEOLIST";
 
 function BhaktiVideo() {
