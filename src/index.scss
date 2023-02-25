@@ -1,4 +1,5 @@
 @import "bootswatch/dist/darkly/bootstrap.min.css";
+@import "~video-react/styles/scss/video-react"; // or import scss
 // TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com for current theme names.)
 
 body {
@@ -36,6 +37,10 @@ a {
   text-decoration: none !important;
 }
 
+.navbar {
+  padding: 6.25px 0;
+}
+
 .image-card-with-title {
   width: 100%;
   height: 100%;
@@ -56,10 +61,14 @@ a {
   .image-card-with-title__image {
     width: 100%;
     height: 100%;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #000;
+    img {
+      max-width: calc(192.5px - 10px);
+      width: 173px;
+      background-size: cover;
+    }
   }
 
   .image-card-with-title__title {
@@ -86,7 +95,7 @@ a {
   text-align: center;
   margin: auto;
   padding: 10px;
-  height: 67.5px;
+  height: 50px;
   h6 {
     margin: 0;
     color: $fontColor;
@@ -149,7 +158,6 @@ a {
   }
   margin-bottom: 80px;
   .bodh-card {
-    padding: 50px 25px;
     background-color: #fff;
     color: #000 !important;
     border-radius: 5px;
@@ -166,6 +174,90 @@ a {
     }
     h6 {
       font-size: 20px;
+    }
+  }
+}
+
+.Mobile-Subtitle {
+  display: none;
+}
+
+.Subtitle {
+  padding: 20px 0;
+  h4 {
+    text-align: center;
+  }
+}
+
+.Modal-content {
+  p {
+    text-align: center;
+    color: #000;
+  }
+}
+.modal-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.full-screen-player {
+  width: 69%;
+  margin: 0 auto;
+}
+
+.custom-video-player {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 83vh;
+  padding: 40px 20px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+
+  .playing-title {
+    margin-top: -3rem;
+  }
+  .video-player {
+    width: 65%;
+  }
+  .video-list {
+    width: 35%;
+    padding-left: 20px;
+    overflow-y: scroll;
+    height: 100%;
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+  .video-item {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 5px;
+
+    .video-thumbnail {
+      margin-right: 10px;
+      img {
+        border-radius: 5px;
+        width: 100px;
+        height: 60px;
+      }
+    }
+
+    .video-title {
+      p {
+        margin: 0;
+        font-size: 18px;
+        color: #fff;
+      }
+    }
+
+    &.active {
+      background: #274684;
+      border-color: #274684;
+      position: relative;
     }
   }
 }
@@ -210,6 +302,81 @@ a {
       }
       h6 {
         font-size: 18px;
+      }
+    }
+  }
+
+  .section {
+    padding: 0.5rem !important;
+  }
+  .image-card-with-title {
+    min-height: 100px;
+
+    h6 {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+    .image-card-with-title__image {
+      img {
+        max-width: 89px;
+      }
+    }
+  }
+
+  .custom-video-player {
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .playing-title {
+      order: 2;
+      margin-top: 1rem;
+      margin-bottom: 0 !important;
+      padding-bottom: 1rem !important;
+    }
+    .video-player {
+      order: 1;
+      width: 100%;
+    }
+    .video-list {
+      order: 3;
+      width: 100%;
+      padding-left: 0;
+      .video-title {
+        p {
+          font-size: 12px;
+        }
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Subtitle {
+    display: none;
+  }
+  .Mobile-Subtitle {
+    margin-top: 2rem;
+    padding: 0 20px;
+    display: flex;
+    text-align: center;
+    h4 {
+      font-size: 16px;
+    }
+  }
+  .image-card-with-title {
+    min-height: 100px;
+
+    h6 {
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .image-card-with-title__image {
+      img {
+        max-width: 169px;
       }
     }
   }

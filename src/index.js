@@ -6,19 +6,24 @@ import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./Pages/ErrorPage";
 import HomePage from "./Pages/HomePage";
 import ContactPage from "./Pages/ContactPage";
-import BodhPage from "./Pages/BodhPage";
-import JeevanCharitra from "./Pages/JeevanCharitra";
-import MandirGalleryPage from "./Pages/MandirGallery";
+import BodhPage from "./Pages/Mandir/BodhPage";
+import JeevanCharitra from "./Pages/Mandir/JeevanCharitra";
+import MandirGalleryPage from "./Pages/Mandir/MandirGallery";
 import PratimajiPage from "./Pages/PratimajiPage";
-import MostPopular from "./Pages/MostPopular";
-import Nityakram from "./Pages/Nityakram";
-import AllCDs from "./Pages/Allcds";
-import AllAlbums from "./Pages/AllAlbums";
+import SwadhyayDaily from "./Pages/Swadhaya/SwadhyayDaily";
+import BhaktiAllAlbums from "./Pages/Bhakti/BhaktiAllAlbums";
 import AshramPage from "./Pages/AshramPage";
+import BhaktiDaily from "./Pages/Bhakti/BhaktiDaily";
+import BhaktiPopular from "./Pages/Bhakti/BhaktiPopular";
+import MandirHistory from "./Pages/Mandir/MandirHistory";
 
 import "react-accessible-accordion/dist/fancy-example.css";
 import "./index.scss";
 import "./player.scss";
+import BhaktiVideo from "./Pages/Bhakti/BhaktiVideo";
+import SwadhyayPopular from "./Pages/Swadhaya/SwadhyayPopular";
+import SwadhyayVideo from "./Pages/Swadhaya/SwadhyayVideo";
+import SwadhyayAllAlbums from "./Pages/Swadhaya/SwadyayAllAlbums";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +47,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: "/mandir-history",
+    element: <MandirHistory />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/bodh",
     element: <BodhPage />,
     errorElement: <ErrorPage />,
@@ -58,42 +68,42 @@ const router = createBrowserRouter([
   },
   {
     path: "/bhakti-daily",
-    element: <Nityakram />,
+    element: <BhaktiDaily />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/bhakti-popular",
-    element: <MostPopular />,
+    element: <BhaktiPopular />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/bhakti-videos",
-    element: <AllCDs />,
+    element: <BhaktiVideo />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/bhakti-all-songs",
-    element: <AllAlbums />,
+    element: <BhaktiAllAlbums />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/swadhyay-daily",
-    element: <Nityakram />,
+    element: <SwadhyayDaily />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/swadhyay-popular",
-    element: <MostPopular />,
+    element: <SwadhyayPopular />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/swadhyay-videos",
-    element: <AllCDs />,
+    element: <SwadhyayVideo />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/swadhyay-all-songs",
-    element: <AllAlbums />,
+    element: <SwadhyayAllAlbums />,
     errorElement: <ErrorPage />,
   },
 ]);
