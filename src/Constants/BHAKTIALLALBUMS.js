@@ -1,18 +1,18 @@
-const ALLALBUMSLIST = [
+const BHAKTIALLALBUMSLIST = [
   {
-    name: "Most Popular",
+    name: "Bhakti Popular",
     img: "https://www.bensound.com/bensound-img/buddy.jpg",
-    link: "/most-popular",
+    link: "/bhakti-popular",
   },
   {
-    name: "Nityakram",
+    name: "Bhakti Daily",
     img: "https://www.bensound.com/bensound-img/sunny.jpg",
-    link: "/nityakram",
+    link: "/bhakti-daily",
   },
   {
-    name: "All CDs",
+    name: "Bhakti Videos",
     img: "https://www.bensound.com/bensound-img/slowmotion.jpg",
     link: "/all-cds",
   },
 ];
-export default ALLALBUMSLIST;
+export default BHAKTIALLALBUMSLIST;

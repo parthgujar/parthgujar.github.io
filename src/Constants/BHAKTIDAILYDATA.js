@@ -1,4 +1,4 @@
-const NityakramList = [
+const BhaktiDailyList = [
   {
     name: "Nice piano and ukulele",
     author: "Royalty",
@@ -225,4 +225,4 @@ const NityakramList = [
   },
 ];
 
-export default NityakramList;
+export default BhaktiDailyList;

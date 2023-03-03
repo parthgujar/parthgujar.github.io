@@ -1,4 +1,4 @@
-const MOSTPLAYED = [
+const SwadhyayDailyList = [
   {
     name: "Nice piano and ukulele",
     author: "Royalty",
@@ -225,4 +225,4 @@ const MOSTPLAYED = [
   },
 ];
 
-export default MOSTPLAYED;
+export default SwadhyayDailyList;

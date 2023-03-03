@@ -3,9 +3,9 @@
 import React from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-import Footer from "../Components/Layout/Footer";
-import Header from "../Components/Layout/Header";
-import MANDIRGALLERY from "../Constants/MANDIRGALLERY";
+import Footer from "../../Components/Layout/Footer";
+import Header from "../../Components/Layout/Header";
+import MANDIRGALLERY from "../../Constants/MANDIRGALLERY";
 
 export default function MandirGalleryPage() {
   return (

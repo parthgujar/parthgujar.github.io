@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import Footer from "../Components/Layout/Footer";
-import Header from "../Components/Layout/Header";
-import DATA from "../Constants/JEEVANCHATIRADATA";
+import Footer from "../../Components/Layout/Footer";
+import Header from "../../Components/Layout/Header";
+import DATA from "../../Constants/JEEVANCHATIRADATA";
 
 function JeevanCharitra() {
   const settings = {

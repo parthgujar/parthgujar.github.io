@@ -2,24 +2,30 @@ import { useEffect, useState } from "react";
 
 const NavLinks = [
   {
-    id: 1,
-    name: "Ashram",
-    link: "/ashram-gallery",
-  },
-  {
     id: 2,
     name: "Mandir",
     link: "/mandir-gallery",
   },
+
   {
     id: 3,
     name: "Bhakti",
-    link: "/bhakti",
+    link: "/bhakti-popular",
+  },
+  {
+    id: 6,
+    name: "Swadhyay",
+    link: "/swadhyay-popular",
   },
   {
     id: 4,
     name: "App",
     link: "/app",
+  },
+  {
+    id: 1,
+    name: "Ashram",
+    link: "/ashram",
   },
   {
     id: 5,

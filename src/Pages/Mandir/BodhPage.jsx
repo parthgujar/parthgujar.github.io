@@ -8,9 +8,9 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 
-import Footer from "../Components/Layout/Footer";
-import Header from "../Components/Layout/Header";
-import BODHDATA from "../Constants/BODHDATA";
+import Footer from "../../Components/Layout/Footer";
+import Header from "../../Components/Layout/Header";
+import BODHDATA from "../../Constants/BODHDATA";
 
 const BodhPage = () => {
   return (
