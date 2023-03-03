@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./Pages/ErrorPage";
@@ -25,7 +25,7 @@ import SwadhyayPopular from "./Pages/Swadhaya/SwadhyayPopular";
 import SwadhyayVideo from "./Pages/Swadhaya/SwadhyayVideo";
 import SwadhyayAllAlbums from "./Pages/Swadhaya/SwadyayAllAlbums";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <HomePage />,
