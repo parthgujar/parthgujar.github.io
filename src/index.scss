@@ -280,9 +280,12 @@ a {
       padding: 25px;
     }
   }
-  .navbar .footer {
+  .navbar {
     position: sticky !important;
     bottom: 0;
+  }
+  .footer {
+    position: relative;
   }
   nav {
     position: sticky !important;
@@ -303,6 +306,28 @@ a {
       h6 {
         font-size: 18px;
       }
+    }
+  }
+
+  .BhaktiDaily {
+    .container-fluid {
+      padding: 0 !important;
+    }
+    .MusicPlayer {
+      padding: 0;
+    }
+  }
+  .GalleryPage {
+    height: calc(100vh - 50px - 50px);
+  }
+  .slick-slide {
+    img {
+      width: 100%;
+    }
+  }
+  .play-list {
+    .track-name {
+      width: 100%;
     }
   }
 
@@ -370,6 +395,7 @@ a {
       font-size: 16px;
     }
   }
+
   .image-card-with-title {
     min-height: 100px;
 
@@ -381,6 +407,38 @@ a {
     .image-card-with-title__image {
       img {
         max-width: 169px;
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .image-card-with-title {
+    .image-card-with-title__image {
+      img {
+        max-width: 142px;
+      }
+    }
+  }
+  .play-list {
+    .track-name {
+      width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .playing-title {
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .image-card-with-title {
+    .image-card-with-title__image {
+      img {
+        max-width: 120px;
       }
     }
   }

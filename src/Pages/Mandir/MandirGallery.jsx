@@ -14,7 +14,7 @@ export default function MandirGalleryPage() {
       <div className="GalleryPage">
         <div className="container-fluid">
           <div className="row justify-content-center">
-            <div className="col-md-12 px-5 mb-5 pb-5">
+            <div className="col-md-12 mb-5 pb-5">
               <div className="gallery">
                 <div className="gallery-title p-3 mb-2 text-center">
                   <h3>Mandir Gallery</h3>

@@ -10,7 +10,7 @@ export default function BhaktiDaily() {
       <div className="BhaktiDaily">
         <div className="container-fluid">
           <div className="row justify-content-center">
-            <div className="col-md-12 mb-5 pb-5">
+            <div className="col-md-12">
               <MusicPlayer musicList={BhaktiDailyList} title="Bhakti" />
             </div>
           </div>

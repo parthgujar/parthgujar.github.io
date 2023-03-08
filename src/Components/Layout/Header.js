@@ -51,7 +51,9 @@ function Header() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid d-flex">
         <a className="navbar-brand" href="/">
-          Shrimad Rajchandra Mandir Devlali
+          {window.innerWidth > 360
+            ? "Shrimad Rajchandra Mandir Devlali"
+            : "SRM Devlali"}
         </a>
         <button
           className={`navbar-toggler ${collapse ? "collapsed" : ""}`}

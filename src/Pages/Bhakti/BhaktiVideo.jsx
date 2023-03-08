@@ -37,9 +37,9 @@ function BhaktiVideo() {
                     </div>
                   ))}
                 </div>
-                <div className="playing-title pb-5 mb-5">
+                {/* <div className="playing-title pb-5 mb-5">
                   <h2>{VideoPlaying.title} </h2>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
