@@ -284,6 +284,11 @@ a {
     position: sticky !important;
     bottom: 0;
   }
+  .JeevanCharitraPage,
+  .MandirHistoryPage,
+  .PratimajiPage {
+    height: calc(100vh - 50px - 50px);
+  }
   .footer {
     position: relative;
   }
@@ -317,8 +322,8 @@ a {
       padding: 0;
     }
   }
-  .GalleryPage {
-    height: calc(100vh - 50px - 50px);
+  .MandirGalleryPage {
+    height: fit-content;
   }
   .slick-slide {
     img {
@@ -429,6 +434,26 @@ a {
   }
 }
 
+@media (max-width: 375px) {
+  .image-card-with-title {
+    .image-card-with-title__image {
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .image-card-with-title {
+    .image-card-with-title__image {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
 @media (max-width: 320px) {
   .playing-title {
     h2 {
@@ -449,6 +474,17 @@ a {
     iframe {
       height: 100%;
       width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .image-card-with-title {
+    .image-card-with-title__image {
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
     }
   }
 }

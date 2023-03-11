@@ -9,7 +9,7 @@ function MandirHistory() {
   return (
     <>
       <Header />
-      <div className="ContactUsPage">
+      <div className="MandirHistoryPage">
         <div id="container-fluid">
           <div className="my-2 pb-2  text-center">
             <h3>Mandir's History</h3>

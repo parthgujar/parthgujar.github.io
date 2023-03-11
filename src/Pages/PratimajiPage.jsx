@@ -11,7 +11,7 @@ export default function PratimajiPage() {
   return (
     <>
       <Header />
-      <div className="GalleryPage">
+      <div className="PratimajiPage">
         <div className="container-fluid">
           <div className="row justify-content-center">
             <div className="col-md-12 px-5 mb-5 pb-5">

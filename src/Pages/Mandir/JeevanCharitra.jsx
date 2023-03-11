@@ -18,7 +18,7 @@ function JeevanCharitra() {
   return (
     <>
       <Header />
-      <div className="GalleryPage">
+      <div className="JeevanCharitraPage">
         <div className="container-fluid">
           <div className="row justify-content-center">
             <div className="col-md-12 px-5">

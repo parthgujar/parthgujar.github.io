@@ -4,33 +4,33 @@ const NavLinks = [
   {
     id: 2,
     name: "Mandir",
-    link: "/mandir-gallery",
+    link: "/#/mandir-gallery",
   },
 
   {
     id: 3,
     name: "Bhakti",
-    link: "/bhakti-popular",
+    link: "/#/bhakti-popular",
   },
   {
     id: 6,
     name: "Swadhyay",
-    link: "/swadhyay-popular",
+    link: "/#/swadhyay-popular",
   },
   {
     id: 4,
     name: "App",
-    link: "/app",
+    link: "/",
   },
   {
     id: 1,
     name: "Ashram",
-    link: "/ashram",
+    link: "/#/ashram",
   },
   {
     id: 5,
     name: "Contact Us",
-    link: "/contact-us",
+    link: "/#/contact-us",
   },
 ];
 
@@ -39,12 +39,17 @@ function Header() {
   const [collapse, setCollapse] = useState(false);
 
   useEffect(() => {
-    if (window.location.pathname === "/") setActiveState(0);
-    else if (window.location.pathname === "/ashram-gallery") setActiveState(1);
-    else if (window.location.pathname === "/mandir-gallery") setActiveState(2);
-    else if (window.location.pathname === "/bhakti") setActiveState(3);
-    else if (window.location.pathname === "/app") setActiveState(4);
-    else if (window.location.pathname === "/contact-us") setActiveState(5);
+    console.log(window.location.pathname);
+    if (window.location.hash === "/") setActiveState(0);
+    else if (window.location.hash.includes("#/ashram")) setActiveState(1);
+    else if (window.location.hash.includes("#/mandir-gallery"))
+      setActiveState(2);
+    else if (window.location.hash.includes("#/bhakti-popular"))
+      setActiveState(3);
+    else if (window.location.hash.includes("#/swadhyay-popular"))
+      setActiveState(6);
+    else if (window.location.hash.includes("#/app")) setActiveState(4);
+    else if (window.location.hash.includes("#/contact-us")) setActiveState(5);
   }, []);
 
   return (
